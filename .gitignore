@@ -1,4 +1,4 @@
 .venv
-credenciais
 __pycache__
 .gitattributes
+.env

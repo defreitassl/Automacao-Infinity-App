@@ -1,7 +1,15 @@
-from credenciais import CPF, DATA_NASCIMENTO
-from functions import fazer_login, perguntar_acao, marcar_presenca, perguntar_tipo_aula
+from dotenv import load_dotenv
+import os
+from app.functions.marcar_presenca import marcar_presenca, perguntar_tipo_aula
+from app.functions.login_functions import fazer_login, perguntar_acao
+from app.functions.agendar_aulas import achar_aulas
 
-fazer_login(cpf=CPF, data_nascimento=DATA_NASCIMENTO)
+load_dotenv()
+
+cpf = os.environ.get("CPF")
+nascimento = os.environ.get("DATA_NASCIMENTO")
+
+fazer_login(cpf=cpf, data_nascimento=nascimento)
 
 acao = perguntar_acao()
 
@@ -12,10 +20,7 @@ match acao:
         marcar_presenca(token=TOKEN, aula_XPATH=tipo_aula)
     
     case 2:
-        print("Nao está pronto ainda")
-    
-    case 3:
-        print("Nao está pronto ainda")
+        achar_aulas()
     
     case _:
         print("Ação inválida selecionada...")
