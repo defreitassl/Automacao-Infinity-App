@@ -5,26 +5,32 @@ totalmente por mim e feita para aprimorar meus conhecimentos lógicos e técnico
 
 ---
 
-### Tecnologias utilizadas
+## Tecnologias utilizadas
 
  - __Selenium__: Um Framework python específico para automações web e webscrapping. Foi o componente principal da aplicação.
 
 ---
 
-### Como utilizar
+## Como utilizar
 
 1. Clone ou instale os arquivos do repositório na sua máquina
 2. Crie e ative seu Ambiente Virtual (venv):
-   
+
+   ### Criando...
    ```python
    python -m venv venv
-
-   # Linux:
+   ```
+   ### Ativando...
+   
+   __Linux__:
+   ```
    source venv/bin/activate
-   # Windows:
+   ```
+   __Windows__:
+   ```
    venv\Scripts\activate
    ```
-3. Instale as dependências necessárias:
+4. Instale as dependências necessárias:
 
    ```python
    pip install selenium
@@ -32,7 +38,7 @@ totalmente por mim e feita para aprimorar meus conhecimentos lógicos e técnico
    ```python
    pip install webdriver-manager
    ```
-4. Crie um arquivo .env (dotenv) e crie as variáveis de ambiente que serão utilizadas para fazer o login:
+5. Crie um arquivo .env (dotenv) e crie as variáveis de ambiente que serão utilizadas para fazer o login:
 
    ! As variáveis devem estar exatamente no seguinte formato...
    ```python
